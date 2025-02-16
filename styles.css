@@ -1,0 +1,148 @@
+:root {
+    --focus-color: #2D5AF0;    /* Vibrant blue for focus */
+    --rest-color: #9C27B0;     /* Purple for rest */
+    --focus-hover: #1a3dad;    /* Darker blue */
+    --rest-hover: #7B1FA2;     /* Darker purple */
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.timer {
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 2rem 0;
+    transition: color 0.3s ease;
+    letter-spacing: -2px;
+}
+
+.timer.work-mode {
+    color: var(--focus-color);
+}
+
+.timer.rest-mode {
+    color: var(--rest-color);
+}
+
+button {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.7rem;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    background-color: var(--focus-color);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mode button {
+    background-color: #808080;
+}
+
+.mode button.active {
+    background-color: #4CAF50;
+}
+
+#reset {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+#reset:hover {
+    background-color: #d0d0d0;
+}
+
+#toggle {
+    background-color: var(--rest-color);
+}
+
+#toggle:hover {
+    background-color: var(--rest-hover);
+}
+
+#toggle.rest-mode {
+    background-color: var(--focus-color);
+}
+
+#toggle.rest-mode:hover {
+    background-color: var(--focus-hover);
+}
+
+/* Add these styles to your existing CSS */
+.timer-settings {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.setting label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.setting input {
+    width: 70px;
+    padding: 0.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.setting input:focus {
+    outline: none;
+    border-color: var(--focus-color);
+}
+
+.setting input::-webkit-inner-spin-button {
+    opacity: 1;
+    height: 28px;
+}
+
+#start.pause-state {
+    background-color: #dc3545;  /* Bootstrap's danger red */
+}
+
+#start.pause-state:hover {
+    background-color: #c82333;  /* Darker red on hover */
+} 

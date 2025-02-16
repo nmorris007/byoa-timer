@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Focus Timer</h1>
+        <div class="timer-settings">
+            <div class="setting">
+                <label>Focus Time (mins)</label>
+                <input type="number" id="focusInput" value="25" min="1" max="60">
+            </div>
+            <div class="setting">
+                <label>Break Time (mins)</label>
+                <input type="number" id="breakInput" value="5" min="1" max="30">
+            </div>
+        </div>
+        <div class="timer">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="controls">
+            <button id="start">Begin Focus</button>
+            <button id="reset">Reset</button>
+            <button id="toggle">Take a Break</button>
+        </div>
+    </div>
+    <audio id="startSound" src="https://assets.mixkit.co/active_storage/sfx/1563/1563-preview.mp3"></audio>
+    <audio id="endSound" src="https://assets.mixkit.co/active_storage/sfx/2832/2832-preview.mp3"></audio>
+    <audio id="breakSound" src="https://assets.mixkit.co/active_storage/sfx/1114/1114-preview.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html> 
